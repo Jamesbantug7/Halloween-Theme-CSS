@@ -48,6 +48,56 @@
   }
 }
 
+
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}   
+
+.cat {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: walk 15s linear forwards;
+}
+
+.zombie {
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  animation: walk 25s linear forwards;
+}
+
+.witch {
+  position: absolute;
+  right: 0;
+  animation: fly 15s linear forwards;
+}   
+
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; 
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}   
+
+@keyframes fly {
+  0%   { transform: translateX(0);      opacity: 1; }
+  100% { transform: translateX(-100vw); opacity: 1; }
+} 
+
 /* Fog drift */
 @keyframes drift {
   from { transform: translateX(-100%); }
