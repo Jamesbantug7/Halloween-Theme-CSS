@@ -31,6 +31,23 @@
   animation: flicker 2.5s ease-in-out infinite;
 }
 
+.confetti  {
+  animation: fall 10s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
 /* Fog drift */
 @keyframes drift {
   from { transform: translateX(-100%); }
